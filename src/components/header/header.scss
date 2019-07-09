@@ -1,6 +1,8 @@
+@import '../../styles/variables';
+
 .header {
     flex: 0;
-    background-color: darkblue;
+    background-color: $color-purple;
     color: white;
 }
 

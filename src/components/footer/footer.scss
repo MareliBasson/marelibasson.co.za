@@ -1,8 +1,10 @@
+@import '../../styles/variables';
+
 .footer {
     flex: 0;
     padding: 20px 0;
-    background-color: #c0c0c0;
-    color: #4f4f4f;
+    background-color: $color-purple-dark;
+    color: #ffffff;
     font-size: 14px;
 }
 
