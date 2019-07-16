@@ -120,6 +120,9 @@ class Menu extends Component {
 					>
 						Section 6
 					</Link>
+					<Link activeClass="active" to="footer" spy={true} smooth={true} offset={-70} duration={500} onClick={this.handleToggle}>
+						Contact Me
+					</Link>
 				</div>
 			</div>
 		)
