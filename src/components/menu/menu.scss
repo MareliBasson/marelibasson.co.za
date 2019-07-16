@@ -1,33 +1,54 @@
+@import "../../styles/variables";
+
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+	height: 100%;
 
-    a {
-        color: white;
-        padding: 7px 15px;
-        margin-left: 20px;
-        font-weight: 300;
-        font-size: 12px;
-        border-radius: 15px;
+	.menu-toggle {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 10px;
+		border-right: 1px solid $color-purple-dark;
+		cursor: pointer;
+		transition: all 0.3s ease;
 
-        &:hover,
-        &:visited,
-        &:active,
-        &:focus {
-            text-decoration: none;
-            outline: none;
-            color: white;
-        }
+		&:hover {
+			background-color: $color-purple-dark;
+			transition: all 0.2s ease;
+		}
 
-        &:hover {
-            text-decoration: none;
-            color: #ff0000;
-        }
+		.menu-icon {
+			&:before {
+				content: "";
+				display: inline-block;
+				vertical-align: -2px;
+				width: 30px;
+				height: 3px;
+				background: white;
+				box-shadow: 0 3px $color-header, 0 -6px white, 0 -9px $color-header, 0 -12px white;
+			}
+		}
+	}
 
-        &:active,
-        &.active {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-    }
+	.menu-container {
+		position: absolute;
+		top: 100%;
+		background-color: red;
+		height: 100vh;
+	}
+
+	a {
+		color: white;
+		padding: 7px 15px;
+		margin-left: 20px;
+		font-weight: 300;
+		font-size: 12px;
+		border-radius: 15px;
+
+		&:active,
+		&.active {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+	}
 }
