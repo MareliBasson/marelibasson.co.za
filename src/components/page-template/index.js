@@ -7,7 +7,6 @@ import "./page-template.css"
 class PageTemplate extends Component {
 	render() {
 		const { children } = this.props
-		const pageHead = this.props.pageHead
 
 		return (
 			<div className="page">

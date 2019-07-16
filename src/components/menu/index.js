@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
 import "./menu.css"
 import { Link, animateScroll as scroll } from "react-scroll"
 
@@ -55,10 +55,15 @@ class Menu extends Component {
 					{/* <NavLink activeClassName="active" to="/gallery">
 						<i className="fa fa-images" /> Gallery
                     </NavLink> */}
-					<a href="#" onClick={this.scrollToTop}>
+
+					<a
+						onClick={() => {
+							this.scrollToTop()
+							this.handleToggle()
+						}}
+					>
 						<i className="fa fa-home" /> Home
 					</a>
-
 					<Link
 						activeClass="active"
 						to="section1"
