@@ -1,5 +1,7 @@
 @import "../../styles/variables";
 
+$menu-width: 300px;
+
 .menu {
 	height: 100%;
 
@@ -41,23 +43,23 @@
 		overflow: hidden;
 
 		&.open {
-			width: 300px;
+			width: $menu-width;
 			transition: width 0.3s ease;
 		}
-	}
 
-	a {
-		display: block;
-		color: white;
-		width: 100%;
-		background-color: red;
-		padding: 7px 15px;
-		font-weight: 300;
-		font-size: 12px;
+		a {
+			display: block;
+			width: $menu-width;
+			color: white;
+			padding: 20px 15px;
+			font-weight: 300;
+			font-size: 12px;
 
-		&:active,
-		&.active {
-			background-color: rgba(255, 255, 255, 0.3);
+			&:hover,
+			&:active,
+			&.active {
+				background-color: $color-purple-dark;
+			}
 		}
 	}
 }
