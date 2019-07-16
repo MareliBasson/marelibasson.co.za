@@ -7,8 +7,10 @@ class Footer extends Component {
 
 		return (
 			<div className="section">
-				<div className="section-content" id={id}>
-					<h1>{id}</h1>
+				<div className="container">
+					<div className="section-content" id={id}>
+						<h1>{id}</h1>
+					</div>
 				</div>
 			</div>
 		)

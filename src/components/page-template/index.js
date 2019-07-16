@@ -12,9 +12,7 @@ class PageTemplate extends Component {
 		return (
 			<div className="page">
 				<Header />
-				<div className="content">
-					<div className="container">{children}</div>
-				</div>
+				<div className="content">{children}</div>
 				<Footer />
 			</div>
 		)

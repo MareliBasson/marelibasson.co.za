@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import Menu from "components/menu"
+import { Link } from "react-scroll"
+
 import "./header.css"
 
 class Header extends Component {
@@ -11,12 +13,19 @@ class Header extends Component {
 						<Menu />
 					</div>
 					<div className="header__right">
-						<div className="icon-links">
+						<a href="">
 							<i className="fab fa-codepen" />
+						</a>
+						<a href="">
 							<i className="fab fa-github" />
+						</a>
+						<a href="">
 							<i className="fab fa-linkedin" />
-						</div>
-						<div className="about">Mareli Basson</div>
+						</a>
+
+						<Link activeClass="active" to="about" smooth={true} offset={-90} duration={500}>
+							Mareli Basson
+						</Link>
 					</div>
 				</div>
 				<div className="header-buffer" />

@@ -10,7 +10,7 @@ class HomePage extends Component {
 				<Section id={"section1"} />
 				<Section id={"section2"} />
 				<Section id={"section3"} />
-				<Section id={"section4"} />
+				<Section id={"about"} />
 				<Section id={"section5"} />
 				<Section id={"section6"} />
 			</PageTemplate>

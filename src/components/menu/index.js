@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { NavLink } from "react-router-dom"
 import "./menu.css"
-import { Link } from "react-scroll"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 class Menu extends Component {
 	constructor(props) {
@@ -37,6 +37,10 @@ class Menu extends Component {
 		})
 	}
 
+	scrollToTop() {
+		scroll.scrollToTop()
+	}
+
 	render() {
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
@@ -45,21 +49,22 @@ class Menu extends Component {
 				</div>
 
 				<div className={`menu-container ${this.state.menuOpen ? "open" : ""}`}>
-					<NavLink activeClassName="active" exact to="/">
+					{/* <NavLink activeClassName="active" exact to="/">
 						<i className="fa fa-home" /> Home
-					</NavLink>
-					<NavLink activeClassName="active" to="/page1">
+					</NavLink> */}
+					{/* <NavLink activeClassName="active" to="/gallery">
 						<i className="fa fa-images" /> Gallery
-					</NavLink>
-					{/* <NavLink activeClassName="active" to="/page2">
-                        Page 2
                     </NavLink> */}
+					<a href="#" onClick={this.scrollToTop}>
+						<i className="fa fa-home" /> Home
+					</a>
+
 					<Link
 						activeClass="active"
 						to="section1"
 						spy={true}
 						smooth={true}
-						offset={-70}
+						offset={-90}
 						duration={500}
 						onClick={this.handleToggle}
 					>
@@ -70,7 +75,7 @@ class Menu extends Component {
 						to="section2"
 						spy={true}
 						smooth={true}
-						offset={-70}
+						offset={-90}
 						duration={500}
 						onClick={this.handleToggle}
 					>
@@ -81,29 +86,21 @@ class Menu extends Component {
 						to="section3"
 						spy={true}
 						smooth={true}
-						offset={-70}
+						offset={-90}
 						duration={500}
 						onClick={this.handleToggle}
 					>
 						Section 3
 					</Link>
-					<Link
-						activeClass="active"
-						to="section4"
-						spy={true}
-						smooth={true}
-						offset={-70}
-						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 4
+					<Link activeClass="active" to="about" spy={true} smooth={true} offset={-90} duration={500} onClick={this.handleToggle}>
+						About
 					</Link>
 					<Link
 						activeClass="active"
 						to="section5"
 						spy={true}
 						smooth={true}
-						offset={-70}
+						offset={-90}
 						duration={500}
 						onClick={this.handleToggle}
 					>
@@ -114,7 +111,7 @@ class Menu extends Component {
 						to="section6"
 						spy={true}
 						smooth={true}
-						offset={-70}
+						offset={-90}
 						duration={500}
 						onClick={this.handleToggle}
 					>
