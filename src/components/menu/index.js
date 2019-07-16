@@ -7,7 +7,7 @@ class Menu extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			menuOpen: true
+			menuOpen: false
 		}
 
 		this.handleToggle = this.handleToggle.bind(this)
