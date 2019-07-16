@@ -11,6 +11,24 @@ class Menu extends Component {
 		}
 
 		this.handleToggle = this.handleToggle.bind(this)
+		this.handleClick = this.handleClick.bind(this)
+	}
+
+	componentWillMount() {
+		document.addEventListener("mousedown", this.handleClick, false)
+	}
+	componentWillUnmount() {
+		document.removeEventListener("mousedown", this.handleClick, false)
+	}
+
+	handleClick(e) {
+		if (this.node.contains(e.target)) {
+			return
+		}
+
+		this.setState({
+			menuOpen: false
+		})
 	}
 
 	handleToggle() {
@@ -21,7 +39,7 @@ class Menu extends Component {
 
 	render() {
 		return (
-			<div className="menu">
+			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
 					<div className="menu-icon" />
 				</div>

@@ -13,7 +13,6 @@ class HomePage extends Component {
 				<Section id={"section4"} />
 				<Section id={"section5"} />
 				<Section id={"section6"} />
-				<Section id={"section7"} />
 			</PageTemplate>
 		)
 	}
