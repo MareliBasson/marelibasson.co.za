@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Section from "components/section"
+import Skill from "components/skill"
 import "./about.css"
 
 class Landing extends Component {
@@ -8,8 +9,14 @@ class Landing extends Component {
 			<Section id="about">
 				<div className="about-container">
 					<div className="column left">
-						<h2>About Me</h2>
-						<h5>Front-end Developer & Ux enthusiast</h5>
+						<h2 className="title">About Me</h2>
+						<h5 className="subheading">Front-end Developer & Ux enthusiast</h5>
+
+						<h4 className="summary">
+							I'm passionate about Front-end Web Development and User Centered Design.
+							I love building amazing websites and user interfaces to the best of my
+							abilities.
+						</h4>
 
 						<p>
 							Over the last decade I've been a teacher, a newspaper layout artist, a
@@ -35,8 +42,20 @@ class Landing extends Component {
 								worked on.
 							</a>
 						</p>
+
+						<a
+							href="https://za.linkedin.com/pub/mareli-basson/33/159/41"
+							className="button">
+							My Resume
+						</a>
 					</div>
-					<div className="column right">test</div>
+					<div className="column right">
+						<Skill skill="html-css" label="HTML/CSS" level="75" />
+						<Skill skill="responsive" label="Responsive" level="75" />
+						<Skill skill="ux" label="Considering the user" level="75" />
+						<Skill skill="js" label="Javascript" level="75" />
+						<Skill skill="react" label="React JS" level="75" />
+					</div>
 				</div>
 			</Section>
 		)

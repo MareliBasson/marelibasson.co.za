@@ -19,10 +19,18 @@
 			margin-bottom: 0.4em;
 			text-align: center;
 		}
-		h5 {
+		.subheading {
 			padding-bottom: 1em;
 			text-align: center;
 			border-bottom: 1px solid $color-grey-light;
+			margin-bottom: 2rem;
+		}
+		.summary {
+			margin-bottom: 1em;
+		}
+
+		.button {
+			margin-top: 1rem;
 		}
 	}
 }
