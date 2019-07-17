@@ -6,11 +6,12 @@ class Section extends Component {
 		const { id, children, background } = this.props
 
 		return (
-			<div className={`section ${id}`} style={{ backgroundImage: `url(${background})` }}>
+			<div
+				id={id}
+				className={`section ${id}`}
+				style={{ backgroundImage: `url(${background})` }}>
 				<div className="container">
-					<div className="section-content" id={id}>
-						{children}
-					</div>
+					<div className="section-content">{children}</div>
 				</div>
 			</div>
 		)

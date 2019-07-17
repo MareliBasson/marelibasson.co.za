@@ -42,7 +42,7 @@ class Menu extends Component {
 	}
 
 	render() {
-		const offset = -100 // header height + section top padding
+		const offset = -60 // header height + section top padding
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
