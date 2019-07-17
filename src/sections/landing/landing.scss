@@ -1,3 +1,44 @@
+@import "../../styles/variables";
+
 .landing {
 	background-color: RosyBrown;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	.intro {
+		width: 50%;
+		text-align: center;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+
+		h1 {
+			margin-bottom: 1.5rem;
+		}
+		h2 {
+			margin-bottom: 1em;
+			line-height: 1.2em;
+
+			@media (max-width: 768px) {
+				background-color: rgba(black, 0.3);
+				padding: 20px;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	.image {
+		$image-size: 180px;
+
+		width: $image-size;
+		height: $image-size;
+		display: inline-block;
+		border-radius: 100%;
+		background-size: cover;
+		background-position: center top;
+		border: 2px solid $color-beige;
+	}
 }
