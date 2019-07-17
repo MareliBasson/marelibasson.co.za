@@ -69,14 +69,20 @@
 
 		.tools {
 			h5 {
-				margin-bottom: 1rem;
+				margin-bottom: 2rem;
 			}
 			.tool-icons {
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
 				align-items: center;
 				font-size: 40px;
 				flex-wrap: wrap;
+
+				> * {
+					min-width: 20%;
+					max-width: 20%;
+					margin-bottom: 30px;
+				}
 			}
 		}
 	}
