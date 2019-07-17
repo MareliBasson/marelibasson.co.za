@@ -1,7 +1,13 @@
+@import "../../styles/variables";
+
 .section {
-	min-height: 100vh;
+	min-height: calc(100vh - #{$header-height});
 	padding: 40px 0px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	@media (max-width: 768px) {
+		padding: 40px 20px;
+	}
 }
