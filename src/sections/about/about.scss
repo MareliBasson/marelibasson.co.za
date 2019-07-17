@@ -1,3 +1,28 @@
+@import "../../styles/variables";
+
 .about {
-	// background-color: red;
+	.about-container {
+		display: flex;
+		justify-content: space-between;
+
+		.column {
+			flex: 1;
+			$column-gap: 60px;
+			&.left {
+				margin-right: $column-gap/2;
+			}
+			&.right {
+				margin-left: $column-gap/2;
+			}
+		}
+		h2 {
+			margin-bottom: 0.4em;
+			text-align: center;
+		}
+		h5 {
+			padding-bottom: 1em;
+			text-align: center;
+			border-bottom: 1px solid $color-grey-light;
+		}
+	}
 }
