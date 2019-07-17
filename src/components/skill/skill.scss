@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.skill {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	progress[value] {
+		appearance: none;
+	}
+}
