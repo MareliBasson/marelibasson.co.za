@@ -54,12 +54,16 @@ $menu-width: 300px;
 			color: white;
 			padding: 20px 15px;
 			font-weight: 300;
-			font-size: 12px;
 
 			&:hover,
 			&:active,
 			&.active {
 				background-color: $color-purple-dark;
+			}
+
+			svg {
+				width: 20px;
+				margin-right: 10px;
 			}
 		}
 	}

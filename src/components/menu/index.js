@@ -60,70 +60,38 @@ class Menu extends Component {
 						onClick={() => {
 							this.scrollToTop()
 							this.handleToggle()
-						}}
-					>
+						}}>
 						<i className="fa fa-home" /> Home
 					</a>
 					<Link
 						activeClass="active"
-						to="section1"
+						to="about"
 						spy={true}
 						smooth={true}
 						offset={-90}
 						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 1
+						onClick={this.handleToggle}>
+						<i className="fa fa-address-card" /> About
 					</Link>
 					<Link
 						activeClass="active"
-						to="section2"
+						to="development"
 						spy={true}
 						smooth={true}
 						offset={-90}
 						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 2
+						onClick={this.handleToggle}>
+						<i className="fa fa-address-card" /> Development
 					</Link>
 					<Link
 						activeClass="active"
-						to="section3"
+						to="footer"
 						spy={true}
 						smooth={true}
-						offset={-90}
+						offset={-70}
 						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 3
-					</Link>
-					<Link activeClass="active" to="about" spy={true} smooth={true} offset={-90} duration={500} onClick={this.handleToggle}>
-						About
-					</Link>
-					<Link
-						activeClass="active"
-						to="section5"
-						spy={true}
-						smooth={true}
-						offset={-90}
-						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 5
-					</Link>
-					<Link
-						activeClass="active"
-						to="section6"
-						spy={true}
-						smooth={true}
-						offset={-90}
-						duration={500}
-						onClick={this.handleToggle}
-					>
-						Section 6
-					</Link>
-					<Link activeClass="active" to="footer" spy={true} smooth={true} offset={-70} duration={500} onClick={this.handleToggle}>
-						Contact Me
+						onClick={this.handleToggle}>
+						<i className="fa fa-envelope-open" /> Contact Me
 					</Link>
 				</div>
 			</div>

@@ -1,18 +1,21 @@
 import React, { Component } from "react"
 import PageTemplate from "components/page-template"
-import Section from "components/section"
+import Landing from "sections/landing"
+import About from "sections/about"
+import Development from "sections/development"
+import OtherSkills from "sections/other-skills"
+import Photography from "sections/photography"
 import "./home.css"
 
 class HomePage extends Component {
 	render() {
 		return (
 			<PageTemplate pageHead="Home Page">
-				<Section id={"section1"} />
-				<Section id={"section2"} />
-				<Section id={"section3"} />
-				<Section id={"about"} />
-				<Section id={"section5"} />
-				<Section id={"section6"} />
+				<Landing />
+				<About />
+				<Development />
+				<OtherSkills />
+				<Photography />
 			</PageTemplate>
 		)
 	}

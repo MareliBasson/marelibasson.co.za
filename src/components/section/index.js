@@ -1,15 +1,15 @@
 import React, { Component } from "react"
 import "./section.css"
 
-class Footer extends Component {
+class Section extends Component {
 	render() {
-		const { id } = this.props
+		const { id, children, background } = this.props
 
 		return (
-			<div className="section">
+			<div className={`section ${id}`} style={{ backgroundImage: `url(${background})` }}>
 				<div className="container">
 					<div className="section-content" id={id}>
-						<h1>{id}</h1>
+						{children}
 					</div>
 				</div>
 			</div>
@@ -17,4 +17,4 @@ class Footer extends Component {
 	}
 }
 
-export default Footer
+export default Section
