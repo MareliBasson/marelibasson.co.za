@@ -23,8 +23,13 @@ class Header extends Component {
 							<i className="fab fa-linkedin" />
 						</a>
 
-						<Link activeClass="active" to="about" smooth={true} offset={-90} duration={500}>
-							Mareli Basson
+						<Link
+							activeClass="active"
+							to="about"
+							smooth={true}
+							offset={-90}
+							duration={500}>
+							<span className="uppercase">Mareli Basson</span>
 						</Link>
 					</div>
 				</div>

@@ -42,6 +42,7 @@ class Menu extends Component {
 	}
 
 	render() {
+		const offset = -100 // header height + section top padding
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
@@ -55,44 +56,66 @@ class Menu extends Component {
 					{/* <NavLink activeClassName="active" to="/gallery">
 						<i className="fa fa-images" /> Gallery
                     </NavLink> */}
-
-					<a
-						onClick={() => {
-							this.scrollToTop()
-							this.handleToggle()
-						}}>
-						<i className="fa fa-home" /> Home
-					</a>
-					<Link
-						activeClass="active"
-						to="about"
-						spy={true}
-						smooth={true}
-						offset={-90}
-						duration={500}
-						onClick={this.handleToggle}>
-						<i className="fa fa-address-card" /> About
-					</Link>
-					<Link
-						activeClass="active"
-						to="development"
-						spy={true}
-						smooth={true}
-						offset={-90}
-						duration={500}
-						onClick={this.handleToggle}>
-						<i className="fa fa-address-card" /> Development
-					</Link>
-					<Link
-						activeClass="active"
-						to="footer"
-						spy={true}
-						smooth={true}
-						offset={-70}
-						duration={500}
-						onClick={this.handleToggle}>
-						<i className="fa fa-envelope-open" /> Contact Me
-					</Link>
+					<div className="link-list">
+						<a
+							onClick={() => {
+								this.scrollToTop()
+								this.handleToggle()
+							}}>
+							<i className="fa fa-home" /> Home
+						</a>
+						<Link
+							activeClass="active"
+							to="about"
+							spy={true}
+							smooth={true}
+							offset={offset}
+							duration={500}
+							onClick={this.handleToggle}>
+							<i className="fa fa-address-card" /> About
+						</Link>
+						<Link
+							activeClass="active"
+							to="development"
+							spy={true}
+							smooth={true}
+							offset={offset}
+							duration={500}
+							onClick={this.handleToggle}>
+							<i className="fa fa-address-card" /> Development
+						</Link>
+						<Link
+							activeClass="active"
+							to="other-skills"
+							spy={true}
+							smooth={true}
+							offset={offset}
+							duration={500}
+							onClick={this.handleToggle}>
+							<i className="fa fa-address-card" /> Other Skills
+						</Link>
+						<Link
+							activeClass="active"
+							to="photography"
+							spy={true}
+							smooth={true}
+							offset={offset}
+							duration={500}
+							onClick={this.handleToggle}>
+							<i className="fa fa-address-card" /> Photography
+						</Link>
+						<Link
+							activeClass="active"
+							to="footer"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={500}
+							onClick={this.handleToggle}>
+							<i className="fa fa-envelope-open" /> Contact Me
+						</Link>
+					</div>
+					<div className="menu-footer" />
 				</div>
 			</div>
 		)
