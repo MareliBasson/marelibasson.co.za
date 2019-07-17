@@ -5,6 +5,10 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media (max-width: 992px) {
+			display: block;
+		}
+
 		.column {
 			flex: 1;
 			$column-gap: 60px;
@@ -13,6 +17,10 @@
 			}
 			&.right {
 				margin-left: $column-gap/2;
+			}
+
+			@media (max-width: 992px) {
+				margin: 0 0 30px !important;
 			}
 		}
 		h2 {
@@ -31,6 +39,45 @@
 
 		.button {
 			margin-top: 1rem;
+		}
+
+		.skills {
+			margin-bottom: 70px;
+			.h5 {
+				margin-bottom: 1rem;
+			}
+			.skills-legend {
+				height: 90px;
+				padding-top: 70px;
+				padding-left: 30%;
+
+				.labels {
+					display: flex;
+					justify-content: space-between;
+
+					> div {
+						flex: 1;
+						max-width: 23%;
+						min-width: 23%;
+						white-space: nowrap;
+						transform: rotate(-60deg);
+						transform-origin: left top;
+					}
+				}
+			}
+		}
+
+		.tools {
+			h5 {
+				margin-bottom: 1rem;
+			}
+			.tool-icons {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 40px;
+				flex-wrap: wrap;
+			}
 		}
 	}
 }

@@ -50,11 +50,41 @@ class Landing extends Component {
 						</a>
 					</div>
 					<div className="column right">
-						<Skill skill="html-css" label="HTML/CSS" level="75" />
-						<Skill skill="responsive" label="Responsive" level="75" />
-						<Skill skill="ux" label="Considering the user" level="75" />
-						<Skill skill="js" label="Javascript" level="75" />
-						<Skill skill="react" label="React JS" level="75" />
+						<div className="skills">
+							<h5 className="skills-title">My skills are:</h5>
+							<div className="skills-legend">
+								<div className="labels">
+									<div>So-so</div>
+									<div>I get by</div>
+									<div>Comfortable</div>
+									<div>Better than most</div>
+									<div>Hot shit</div>
+								</div>
+							</div>
+							<Skill skill="html-css" label="HTML/CSS" level="85" />
+							<Skill skill="sass" label="SCSS" level="75" />
+							<Skill skill="responsive" label="Responsive" level="90" />
+							<Skill skill="ux" label="Considering the user" level="75" />
+							<Skill skill="js" label="Javascript" level="55" />
+							<Skill skill="react" label="React JS" level="55" />
+							<Skill skill="node" label="Node" level="30" />
+							<Skill skill="testing" label="Testing" level="15" />
+						</div>
+
+						<div className="tools">
+							<h5 className="skills-title">Tools I'm comfortable with:</h5>
+							<div className="tool-icons">
+								<i class="fab fa-bitbucket" />
+								<i class="fab fa-github" />
+								<i class="fab fa-gitkraken" />
+								<i class="fab fa-npm" />
+								<i class="fab fa-slack" />
+								<i class="fab fa-stack-overflow" />
+								<i class="fab fa-codepen" />
+								<i class="fab fa-confluence" />
+								<i class="fab fa-docker" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</Section>
