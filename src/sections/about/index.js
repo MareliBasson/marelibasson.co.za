@@ -64,11 +64,12 @@ class Landing extends Component {
 							<Skill skill="html-css" label="HTML/CSS" level="85" />
 							<Skill skill="sass" label="SCSS" level="75" />
 							<Skill skill="responsive" label="Responsive" level="90" />
-							<Skill skill="ux" label="Considering the user" level="75" />
 							<Skill skill="js" label="Javascript" level="55" />
 							<Skill skill="react" label="React JS" level="55" />
 							<Skill skill="node" label="Node" level="30" />
 							<Skill skill="testing" label="Testing" level="15" />
+							<Skill skill="ux" label="Considering the user" level="75" />
+							<Skill skill="ux" label="Attention to detail" level="80" />
 						</div>
 
 						<div className="tools">
