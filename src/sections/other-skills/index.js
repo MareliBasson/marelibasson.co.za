@@ -6,7 +6,7 @@ class OtherSkills extends Component {
 	render() {
 		return (
 			<Section id="other-skills">
-				<h1>Other Skills</h1>
+				<h2>Other Skills</h2>
 			</Section>
 		)
 	}

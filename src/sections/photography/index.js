@@ -24,27 +24,29 @@ class Photography extends Component {
 	render() {
 		return (
 			<Section id="photography">
-				<h1>Photography</h1>
+				<h2>Photography</h2>
 
 				<LightgalleryProvider>
-					<h1 style={{ textAlign: "center" }}>Group 1</h1>
+					<h2 style={{ textAlign: "center" }}>Group 1</h2>
 					<div
 						style={{
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center"
-						}}>
+						}}
+					>
 						{GROUP1.map((photo, id) => (
 							<PhotoItem key={id} image={photo} group="group1" />
 						))}
 					</div>
-					<h1 style={{ textAlign: "center" }}>Group 2</h1>
+					<h2 style={{ textAlign: "center" }}>Group 2</h2>
 					<div
 						style={{
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center"
-						}}>
+						}}
+					>
 						{GROUP2.map((photo, id) => (
 							<PhotoItem key={id} image={photo} group="group2" />
 						))}

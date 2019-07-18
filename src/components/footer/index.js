@@ -11,7 +11,11 @@ class Footer extends Component {
 							Contact me:
 							<a href="mailto:basson.mareli@gmail.com">basson.mareli@gmail.com</a>
 						</div>
-						<div className="footer__col">col 2</div>
+						<div className="footer__col">
+							Disclaimer, this template design is based on one I bought through Creative Market. I have however completely
+							rebuilt it using ReactJS and netlify for deployment. You can view the repo for this project here:
+							<a href="">marelibasson.com Repo</a>
+						</div>
 					</div>
 				</div>
 			</div>
