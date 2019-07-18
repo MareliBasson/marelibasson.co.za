@@ -11,11 +11,7 @@ class Footer extends Component {
 							Contact me:
 							<a href="mailto:basson.mareli@gmail.com">basson.mareli@gmail.com</a>
 						</div>
-						<div className="footer__col">
-							<div className="icon">a</div>
-							<div className="icon">a</div>
-							<div className="icon">a</div>
-						</div>
+						<div className="footer__col">col 2</div>
 					</div>
 				</div>
 			</div>

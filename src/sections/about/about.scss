@@ -1,6 +1,10 @@
 @import "../../styles/variables";
 
 .about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	.about-container {
 		display: flex;
 		justify-content: space-between;
@@ -11,7 +15,7 @@
 
 		.column {
 			flex: 1;
-			$column-gap: 60px;
+			$column-gap: 80px;
 			&.left {
 				margin-right: $column-gap/2;
 			}

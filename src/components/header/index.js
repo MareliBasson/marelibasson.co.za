@@ -27,7 +27,7 @@ class Header extends Component {
 							activeClass="active"
 							to="about"
 							smooth={true}
-							offset={-90}
+							offset={-60}
 							duration={500}>
 							<span className="uppercase">Mareli Basson</span>
 						</Link>
