@@ -61,7 +61,8 @@ class Menu extends Component {
 							onClick={() => {
 								this.scrollToTop()
 								this.handleToggle()
-							}}>
+							}}
+						>
 							<i className="fa fa-home" /> Home
 						</a>
 						<Link
@@ -71,7 +72,8 @@ class Menu extends Component {
 							smooth={true}
 							offset={offset}
 							duration={500}
-							onClick={this.handleToggle}>
+							onClick={this.handleToggle}
+						>
 							<i className="fa fa-address-card" /> About
 						</Link>
 						<Link
@@ -81,7 +83,8 @@ class Menu extends Component {
 							smooth={true}
 							offset={offset}
 							duration={500}
-							onClick={this.handleToggle}>
+							onClick={this.handleToggle}
+						>
 							<i className="fa fa-address-card" /> Development
 						</Link>
 						<Link
@@ -91,18 +94,9 @@ class Menu extends Component {
 							smooth={true}
 							offset={offset}
 							duration={500}
-							onClick={this.handleToggle}>
+							onClick={this.handleToggle}
+						>
 							<i className="fa fa-address-card" /> Other Skills
-						</Link>
-						<Link
-							activeClass="active"
-							to="photography"
-							spy={true}
-							smooth={true}
-							offset={offset}
-							duration={500}
-							onClick={this.handleToggle}>
-							<i className="fa fa-address-card" /> Photography
 						</Link>
 						<Link
 							activeClass="active"
@@ -111,7 +105,8 @@ class Menu extends Component {
 							smooth={true}
 							offset={-70}
 							duration={500}
-							onClick={this.handleToggle}>
+							onClick={this.handleToggle}
+						>
 							<i className="fa fa-envelope-open" /> Contact Me
 						</Link>
 					</div>
