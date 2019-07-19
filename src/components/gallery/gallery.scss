@@ -2,18 +2,35 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 
 	.thumbnail-container {
 		min-width: 19%;
 		max-width: 19%;
 		overflow: hidden;
 		position: relative;
+		margin-bottom: 20px;
+		cursor: pointer;
+
+		@media (max-width: 768px) {
+			min-width: 32%;
+			max-width: 32%;
+			margin-bottom: 10px;
+		}
 
 		.image {
 			width: 100%;
 			padding-top: 100%;
 			background-position: center;
 			background-size: cover;
+			transition: all 0.2s ease;
+		}
+
+		&:hover {
+			.image {
+				transform: scale(1.1);
+				transition: all 0.2s ease;
+			}
 		}
 	}
 }

@@ -4,7 +4,6 @@ import Landing from "sections/landing"
 import About from "sections/about"
 import Development from "sections/development"
 import OtherSkills from "sections/other-skills"
-import Photography from "sections/photography"
 import "./home.css"
 
 class HomePage extends Component {
@@ -15,7 +14,6 @@ class HomePage extends Component {
 				<About />
 				<Development />
 				<OtherSkills />
-				<Photography />
 			</PageTemplate>
 		)
 	}

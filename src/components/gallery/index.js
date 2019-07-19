@@ -6,7 +6,6 @@ import "./gallery.css"
 const PhotoItem = ({ image, group }) => (
 	<div className="thumbnail-container">
 		<LightgalleryItem group={group} src={image}>
-			{/* <img src={image} alt="" /> */}
 			<div className="image" style={{ backgroundImage: `url(${image})` }} />
 		</LightgalleryItem>
 	</div>
