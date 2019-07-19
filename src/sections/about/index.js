@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Section from "components/section"
 import Skill from "components/skill"
+import { Link } from "react-scroll"
 import Fade from "react-reveal/Fade"
 import "./about.css"
 
@@ -46,7 +47,9 @@ class Landing extends Component {
 								skills.
 							</p>
 							<p>
-								<a href="">Please take a look below at some of my favourite projects I've worked on.</a>
+								<Link activeClass="active" to="development" smooth={true} offset={-60} duration={500}>
+									Please take a look below at some of my favourite projects I've worked on.
+								</Link>
 							</p>
 
 							<a

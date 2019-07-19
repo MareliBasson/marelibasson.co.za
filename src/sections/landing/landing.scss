@@ -28,17 +28,36 @@
 				border-radius: 4px;
 			}
 		}
+
+		.image {
+			$image-size: 180px;
+
+			width: $image-size;
+			height: $image-size;
+			display: inline-block;
+			border-radius: 100%;
+			background-size: cover;
+			background-position: center top;
+			border: 2px solid $color-beige;
+		}
 	}
+	.scroll-down {
+		display: block;
+		text-align: center;
+		cursor: pointer;
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		span {
+			display: block;
+		}
 
-	.image {
-		$image-size: 180px;
-
-		width: $image-size;
-		height: $image-size;
-		display: inline-block;
-		border-radius: 100%;
-		background-size: cover;
-		background-position: center top;
-		border: 2px solid $color-beige;
+		svg {
+			display: block;
+			text-align: center;
+			font-size: 2rem;
+			margin: 20px auto 0;
+		}
 	}
 }
