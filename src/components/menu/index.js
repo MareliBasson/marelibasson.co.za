@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./menu.css"
 import { Link, animateScroll as scroll } from "react-scroll"
 
@@ -43,6 +43,9 @@ class Menu extends Component {
 
 	render() {
 		const offset = -60 // header height + section top padding
+		console.log("Location")
+		console.log(this.state.location)
+		console.log("--------------------------------------------------------")
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
@@ -53,9 +56,6 @@ class Menu extends Component {
 					{/* <NavLink activeClassName="active" exact to="/">
 						<i className="fa fa-home" /> Home
 					</NavLink> */}
-					{/* <NavLink activeClassName="active" to="/gallery">
-						<i className="fa fa-images" /> Gallery
-                    </NavLink> */}
 					<div className="link-list">
 						<a
 							onClick={() => {
@@ -87,17 +87,9 @@ class Menu extends Component {
 						>
 							<i className="fa fa-address-card" /> Development
 						</Link>
-						<Link
-							activeClass="active"
-							to="other-skills"
-							spy={true}
-							smooth={true}
-							offset={offset}
-							duration={500}
-							onClick={this.handleToggle}
-						>
-							<i className="fa fa-address-card" /> Other Skills
-						</Link>
+						<NavLink activeClassName="active" to="/gallery">
+							<i className="fa fa-images" /> Other Skills
+						</NavLink>
 						<Link
 							activeClass="active"
 							to="footer"

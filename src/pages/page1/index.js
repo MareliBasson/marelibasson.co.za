@@ -1,12 +1,13 @@
 import React, { Component } from "react"
 import PageTemplate from "components/page-template"
+import OtherSkills from "sections/other-skills"
 import "./page1.css"
 
 class PageOne extends Component {
 	render() {
 		return (
 			<PageTemplate pageHead="Gallery">
-				<p>Some text goes here</p>
+				<OtherSkills />
 			</PageTemplate>
 		)
 	}
