@@ -6,7 +6,6 @@ class Skill extends Component {
 	render() {
 		const { skill, label, level, index } = this.props
 
-		console.log(0.5 * index)
 		return (
 			<Fade up delay={100 * index} duration={500} fraction={0.5}>
 				<div className="skill">

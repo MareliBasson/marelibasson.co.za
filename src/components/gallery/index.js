@@ -15,7 +15,6 @@ class Gallery extends Component {
 	render() {
 		const { data, galleryName } = this.props
 
-		console.log(data)
 		return (
 			<LightgalleryProvider
 				lightgallerySettings={{
