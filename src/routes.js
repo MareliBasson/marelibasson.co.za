@@ -8,6 +8,7 @@ const Routes = () => (
 		<React.Fragment>
 			<Route exact path="/" component={HomePage} />
 			<Route path="/gallery" component={PageOne} />
+			<Route path="/convertor" component={PageOne} />
 		</React.Fragment>
 	</Router>
 )
