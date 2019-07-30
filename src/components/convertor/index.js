@@ -34,6 +34,9 @@ class Convertor extends Component {
 						ref={filename => (this.filename = filename)}
 						name="name"
 						value={this.state.input}
+						onClick={e => {
+							this.setState({ input: "" })
+						}}
 						onChange={e => this.handleChange(e)}
 					/>
 					<div class="copy-btn">
