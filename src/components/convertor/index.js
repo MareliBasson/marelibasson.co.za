@@ -13,8 +13,7 @@ class Convertor extends Component {
 
 	handleChange = e => {
 		this.setState({
-			input: e.target.value.replace(/\s+/g, "-").toLowerCase(),
-			copySuccess: ""
+			input: e.target.value.replace(/\s+/g, "-").toLowerCase()
 		})
 	}
 
@@ -35,7 +34,7 @@ class Convertor extends Component {
 						name="name"
 						value={this.state.input}
 						onClick={e => {
-							this.setState({ input: "" })
+							this.setState({ input: "", copySuccess: "" })
 						}}
 						onChange={e => this.handleChange(e)}
 					/>
