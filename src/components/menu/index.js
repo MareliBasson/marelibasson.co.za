@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import { NavLink } from "react-router-dom"
 import "./menu.css"
-import { Link, animateScroll as scroll } from "react-scroll"
+import { animateScroll as scroll } from "react-scroll"
+import HomeMenuList from "./menu-home"
 
 class Menu extends Component {
 	constructor(props) {
@@ -12,6 +12,7 @@ class Menu extends Component {
 
 		this.handleToggle = this.handleToggle.bind(this)
 		this.handleClick = this.handleClick.bind(this)
+		this.scrollToTop = this.scrollToTop.bind(this)
 	}
 
 	componentWillMount() {
@@ -50,57 +51,8 @@ class Menu extends Component {
 				</div>
 
 				<div className={`menu-container ${this.state.menuOpen ? "open" : ""}`}>
-					{/* <NavLink activeClassName="active" exact to="/">
-						<i className="fa fa-home" /> Home
-					</NavLink> */}
 					<div className="link-list">
-						<a
-							onClick={() => {
-								this.scrollToTop()
-								this.handleToggle()
-							}}
-						>
-							<i className="fa fa-home" /> Home
-						</a>
-						<Link
-							activeClass="active"
-							to="about"
-							spy={true}
-							smooth={true}
-							offset={offset}
-							duration={500}
-							onClick={this.handleToggle}
-						>
-							<i className="fa fa-address-card" /> About
-						</Link>
-						<Link
-							activeClass="active"
-							to="development"
-							spy={true}
-							smooth={true}
-							offset={offset}
-							duration={500}
-							onClick={this.handleToggle}
-						>
-							<i className="fa fa-address-card" /> Development
-						</Link>
-						<NavLink activeClassName="active" to="/gallery">
-							<i className="fa fa-images" /> Other Skills
-						</NavLink>
-						<NavLink activeClassName="active" to="/convertor">
-							<i className="fa fa-images" /> Filename Tool
-						</NavLink>
-						<Link
-							activeClass="active"
-							to="footer"
-							spy={true}
-							smooth={true}
-							offset={-70}
-							duration={500}
-							onClick={this.handleToggle}
-						>
-							<i className="fa fa-envelope-open" /> Contact Me
-						</Link>
+						<HomeMenuList handleToggle={this.handleToggle} scrollToTop={this.scrollToTop} offset={offset} />
 					</div>
 					<div className="menu-footer" />
 				</div>
