@@ -43,9 +43,6 @@ class Menu extends Component {
 
 	render() {
 		const offset = -60 // header height + section top padding
-		console.log("Location")
-		console.log(this.state.location)
-		console.log("--------------------------------------------------------")
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
@@ -89,6 +86,9 @@ class Menu extends Component {
 						</Link>
 						<NavLink activeClassName="active" to="/gallery">
 							<i className="fa fa-images" /> Other Skills
+						</NavLink>
+						<NavLink activeClassName="active" to="/convertor">
+							<i className="fa fa-images" /> Filename Tool
 						</NavLink>
 						<Link
 							activeClass="active"
