@@ -38,7 +38,7 @@ class Convertor extends Component {
 						}}
 						onChange={e => this.handleChange(e)}
 					/>
-					<div class="copy-btn">
+					<div className="copy-btn">
 						<button onClick={this.copyToClipboard} type="submit">
 							Copy
 						</button>

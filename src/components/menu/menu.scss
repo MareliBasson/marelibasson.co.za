@@ -58,6 +58,10 @@ $menu-width: 300px;
 				cursor: pointer;
 				border-bottom: 1px solid $color-purple-dark;
 
+				&.sub-link {
+					padding-left: 40px;
+				}
+
 				&:hover,
 				&:active,
 				&.active {

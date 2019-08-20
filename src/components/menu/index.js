@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./menu.css"
 import { animateScroll as scroll } from "react-scroll"
-import HomeMenuList from "./menu-home"
+import DefaultMenuList from "./menu-default"
 
 class Menu extends Component {
 	constructor(props) {
@@ -44,6 +44,8 @@ class Menu extends Component {
 
 	render() {
 		const offset = -60 // header height + section top padding
+		const url = window.location.pathname
+
 		return (
 			<div className="menu" ref={node => (this.node = node)}>
 				<div className="menu-toggle" onClick={this.handleToggle}>
@@ -52,7 +54,7 @@ class Menu extends Component {
 
 				<div className={`menu-container ${this.state.menuOpen ? "open" : ""}`}>
 					<div className="link-list">
-						<HomeMenuList handleToggle={this.handleToggle} scrollToTop={this.scrollToTop} offset={offset} />
+						<DefaultMenuList handleToggle={this.handleToggle} scrollToTop={this.scrollToTop} offset={offset} location={url} />
 					</div>
 					<div className="menu-footer" />
 				</div>

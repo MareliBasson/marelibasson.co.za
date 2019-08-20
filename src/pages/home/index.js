@@ -3,7 +3,7 @@ import PageTemplate from "components/page-template"
 import Landing from "sections/landing"
 import About from "sections/about"
 import Development from "sections/development"
-import OtherSkills from "sections/other-skills"
+// import OtherSkills from "sections/other-skills"
 import "./home.css"
 
 class HomePage extends Component {
@@ -13,7 +13,6 @@ class HomePage extends Component {
 				<Landing />
 				<About />
 				<Development />
-				<OtherSkills />
 			</PageTemplate>
 		)
 	}
