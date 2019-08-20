@@ -1,0 +1,13 @@
+{
+	"skills": [
+		{ "skill": "html-css", "label": "HTML/CSS", "level": 85 },
+		{ "skill": "sass", "label": "SCSS", "level": 75 },
+		{ "skill": "responsive", "label": "Responsive", "level": 90 },
+		{ "skill": "js", "label": "Javascript", "level": 55 },
+		{ "skill": "react", "label": "React JS", "level": 55 },
+		{ "skill": "node", "label": "Node JS", "level": 30 },
+		{ "skill": "testing", "label": "Testing", "level": 20 },
+		{ "skill": "ux", "label": "Considering the user", "level": 75 },
+		{ "skill": "detail", "label": "Attention to detail", "level": 80 }
+	]
+}

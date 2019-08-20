@@ -6,11 +6,11 @@ import "./other-skills.css"
 class OtherSkills extends Component {
 	render() {
 		const photography = require("../../data/photography").photos
+
 		return (
 			<Section id="other-skills">
 				<h2>Other Skills</h2>
 				<Gallery data={photography} galleryName="photography" />
-				<Gallery data={[]} galleryName="illustration" />
 			</Section>
 		)
 	}

@@ -5,20 +5,10 @@ import { Link } from "react-scroll"
 import Fade from "react-reveal/Fade"
 import "./about.css"
 
-const Skills = [
-	{ skill: "html-css", label: "HTML/CSS", level: 85 },
-	{ skill: "sass", label: "SCSS", level: 75 },
-	{ skill: "responsive", label: "Responsive", level: 90 },
-	{ skill: "js", label: "Javascript", level: 55 },
-	{ skill: "react", label: "React JS", level: 55 },
-	{ skill: "node", label: "Node JS", level: 30 },
-	{ skill: "testing", label: "Testing", level: 10 },
-	{ skill: "ux", label: "Considering the user", level: 75 },
-	{ skill: "detail", label: "Attention to detail", level: 80 }
-]
-
 class Landing extends Component {
 	render() {
+		const skills = require("../../data/skills").skills
+
 		return (
 			<Section id="about">
 				<div className="about-container">
@@ -75,7 +65,7 @@ class Landing extends Component {
 								</div>
 							</div>
 
-							{Skills.map((skill, index) => (
+							{skills.map((skill, index) => (
 								<Skill key={`skill-${index}`} skill={skill.skill} label={skill.label} level={skill.level} index={index} />
 							))}
 						</div>
