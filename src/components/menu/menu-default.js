@@ -11,6 +11,7 @@ class DefaultMenuList extends Component {
 	render() {
 		const { handleToggle, scrollToTop, offset, location } = this.props
 		console.log(location)
+		console.log(location !== "/convertor")
 		return (
 			<Fragment>
 				{location === "/" ? (
@@ -54,12 +55,19 @@ class DefaultMenuList extends Component {
 						Home
 					</NavLink>
 				)}
-				<NavLink activeClassName="active" to="/gallery">
-					<i className="fa fa-images" /> Other Skills
-				</NavLink>
-				<NavLink activeClassName="active" to="/convertor">
-					<i className="fa fa-images" /> Filename Tool
-				</NavLink>
+
+				{location !== "/gallery" && (
+					<NavLink activeClassName="active" to="/gallery">
+						<i className="fa fa-images" /> Other Skills
+					</NavLink>
+				)}
+
+				{location !== "/convertor" && (
+					<NavLink activeClassName="active" to="/convertor">
+						<i className="fa fa-images" /> Filename Tool
+					</NavLink>
+				)}
+
 				<Link activeClass="active" to="footer" spy={true} smooth={true} offset={-70} duration={500} onClick={handleToggle}>
 					<i className="fa fa-envelope-open" /> Contact Me
 				</Link>
