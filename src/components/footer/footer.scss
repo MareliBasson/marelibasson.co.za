@@ -2,18 +2,22 @@
 
 .footer {
 	flex: 0;
-	padding: 50px 0;
+	padding: 100px 0 50px;
 	background-color: $color-purple-dark;
 	color: #ffffff;
 	font-size: 14px;
-	height: 300px;
-}
 
-.footer__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-}
+	.contact {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 100px;
 
-.footer__col {
+		h4 {
+			margin-bottom: 0.5em;
+		}
+	}
+	.disclaimer {
+		border-top: 1px solid $color-pink-dark;
+		padding-top: 20px;
+	}
 }
