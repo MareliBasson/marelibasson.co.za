@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
-import "./convertor.css"
+import "./filename-convertor.css"
 
-class Convertor extends Component {
+class FilenameConvertor extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -50,4 +50,4 @@ class Convertor extends Component {
 	}
 }
 
-export default Convertor
+export default FilenameConvertor

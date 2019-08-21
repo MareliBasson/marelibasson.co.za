@@ -13,7 +13,7 @@ class Footer extends Component {
 						<h5>Disclaimer</h5> <br />
 						This template design is based on one I bought from Creative Market. I have however completely rebuilt it using
 						ReactJS and is hosting it using{" "}
-						<a href="https://www.netlify.com/" target="_blank">
+						<a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">
 							Netlify
 						</a>
 						. You can view the repo for this project here:

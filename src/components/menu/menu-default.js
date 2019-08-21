@@ -46,7 +46,7 @@ class DefaultMenuList extends Component {
 							duration={500}
 							onClick={handleToggle}
 						>
-							<i className="fa fa-address-card" /> Development
+							<i class="fas fa-code" /> Development
 						</Link>
 					</Fragment>
 				) : (
@@ -56,15 +56,14 @@ class DefaultMenuList extends Component {
 					</NavLink>
 				)}
 
-				{location !== "/gallery" && (
-					<NavLink activeClassName="active" to="/gallery">
-						<i className="fa fa-images" /> Other Skills
-					</NavLink>
-				)}
+				<a href="https://ambra.portfoliobox.net">
+					<i className="fa fa-images" />
+					Creative Portfolio
+				</a>
 
-				{location !== "/convertor" && (
-					<NavLink activeClassName="active" to="/convertor">
-						<i className="fa fa-images" /> Filename Tool
+				{location !== "/tools" && (
+					<NavLink activeClassName="active" to="/tools">
+						<i class="fas fa-tools" /> Tools
 					</NavLink>
 				)}
 
