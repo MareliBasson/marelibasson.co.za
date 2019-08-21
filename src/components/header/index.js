@@ -13,22 +13,17 @@ class Header extends Component {
 						<Menu />
 					</div>
 					<div className="header__right">
-						<a href="">
+						<a href="https://codepen.io/MareliBasson/">
 							<i className="fab fa-codepen" />
 						</a>
-						<a href="">
+						<a href="https://github.com/MareliBasson">
 							<i className="fab fa-github" />
 						</a>
-						<a href="">
+						<a href="https://www.linkedin.com/in/mareli-basson-04115933/">
 							<i className="fab fa-linkedin" />
 						</a>
 
-						<Link
-							activeClass="active"
-							to="about"
-							smooth={true}
-							offset={-60}
-							duration={500}>
+						<Link activeClass="active" to="about" smooth={true} offset={-60} duration={500}>
 							<span className="uppercase">Mareli Basson</span>
 						</Link>
 					</div>

@@ -35,8 +35,10 @@ class Landing extends Component {
 				</div>
 				<Link className="scroll-down" activeClass="active" to="about" smooth={true} offset={-60} duration={500}>
 					<Fade delay={2000} enter={this.state.showTitle}>
-						<span>Get to know me</span>
-						<i className="fa fa-arrow-circle-down" />
+						<div>
+							<span>Get to know me</span>
+							<i className="fa fa-arrow-circle-down" />
+						</div>
 					</Fade>
 				</Link>
 			</Section>
