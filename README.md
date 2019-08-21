@@ -1,9 +1,5 @@
-# react-boilerplate-site
+# marelibasson.com
 
-Are you a React beginner who just wants to quickly build a simple website using ReactJS, Sass and some basic page navigation?
+This is the codebase for my personal portfolio website. It's a constant work in progress as well as often acting as a sandbox for quick tools I spin up to help me with tasks. 
 
-**Then this project will get you started quickly.**
-
-* This is a project that's been created using Create-React-App and CSS Preprocessing(Sass) has already been setup for ease of use.
-* A few components and pages have been added to start building with.
-* React Router(v4) has been added to help with site navigation - a menu component with a couple of links have been added as a starting point.
+I've built this using my ReactJS website boilerplate project along with Netlify for deployment. 
