@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .convertor {
 	height: 80vh;
@@ -22,11 +22,38 @@
 		margin-bottom: 2rem;
 
 		.filename-input {
-			font-size: 24px;
-			width: 100%;
-			text-align: center;
-			margin-bottom: 3rem;
-			height: 80px;
+			position: relative;
+			input {
+				outline: none;
+				display: block;
+				font-size: 24px;
+				width: 100%;
+				text-align: center;
+				margin-bottom: 3rem;
+				height: 80px;
+				padding: 0 20px;
+			}
+			button {
+				border: none;
+				background-image: none;
+				background-color: transparent;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				position: absolute;
+				outline: none;
+				top: 0px;
+				right: 0px;
+				height: 80px;
+				width: 80px;
+				font-size: 30px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+
+				&:hover {
+					color: indianred;
+					transition: color 0.2s ease;
+				}
+			}
 		}
 
 		.copy-btn {
@@ -42,8 +69,17 @@
 			font-weight: 600;
 			height: 70px;
 
-			div {
+			input {
+				border: none;
+				background-image: none;
+				background-color: transparent;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				outline: none;
+				display: block;
+				box-shadow: none;
 				max-width: 80%;
+				width: 100%;
 				line-height: 1.5em;
 				overflow: hidden;
 				text-overflow: ellipsis;

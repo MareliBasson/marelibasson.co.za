@@ -1,68 +1,68 @@
-import React, { Component } from "react"
-import "./filename-convertor.css"
+import React, { Component } from 'react';
+import './filename-convertor.css';
 
-var _ = require("lodash")
+var _ = require('lodash');
 
 class FilenameConvertor extends Component {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.state = {
-			filenameInput: "",
-			copySuccess: "Copy",
-			spaces: "dash",
-			prefix: "",
-			suffix: "",
-			formattedName: ""
-		}
+			filenameInput: '',
+			copySuccess: 'Copy',
+			spaces: 'dash',
+			prefix: '',
+			suffix: '',
+			formattedName: ''
+		};
 
-		this.formatName = this.formatName.bind(this)
-		this.handleChange = this.handleChange.bind(this)
+		this.formatName = this.formatName.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange = e => {
 		const name = e.target.name,
-			val = e.target.value.trim()
+			val = e.target.value.trim();
 
 		this.setState({
 			[name]: val
-		})
-	}
+		});
+	};
 
 	formatName = e => {
-		const { filenameInput, spaces, prefix, suffix } = this.state
+		const { filenameInput, spaces, prefix, suffix } = this.state;
 
-		const spaceSymbol = spaces === "underscore" ? "_" : spaces === "dash" ? "-" : ""
+		const spaceSymbol = spaces === 'underscore' ? '_' : spaces === 'dash' ? '-' : '';
 
-		const fullname = `${prefix} ${filenameInput} ${suffix}`
+		const fullname = `${prefix} ${filenameInput} ${suffix}`;
 
 		const formatFullname = fullname
 			.trim()
 			.toLowerCase()
-			.replace(/[-_]/g, " ")
-			.replace(/[.,`"'“”/#!$%^&*;:{}=~()]/g, "")
+			.replace(/[-_]/g, ' ')
+			.replace(/[.,`"'“”/#!$%^&*;:{}=~()]/g, '');
 
 		this.setState({
 			formattedName: formatFullname.replace(/\s+/g, spaceSymbol)
-		})
-	}
+		});
+	};
 
 	componentDidUpdate(prevProps, prevState) {
 		if (!_.isEqual(prevState, this.state)) {
-			this.formatName()
+			this.formatName();
 		}
 	}
 
 	copyToClipboard = e => {
-		e.preventDefault()
+		e.preventDefault();
 
-		this.filename.select()
-		document.execCommand("copy")
-		e.target.focus()
-		this.setState({ copySuccess: "Copied!" })
-	}
+		this.filename.select();
+		document.execCommand('copy');
+		e.target.focus();
+		this.setState({ copySuccess: 'Copied!' });
+	};
 
 	render() {
-		const { filenameInput, formattedName, copySuccess, spaces, prefix, suffix } = this.state
+		const { filenameInput, formattedName, copySuccess, spaces, prefix, suffix } = this.state;
 
 		return (
 			<div className="container convertor">
@@ -71,27 +71,37 @@ class FilenameConvertor extends Component {
 				</h2>
 				<form>
 					<div className="filename-input-container">
-						<input
-							ref={filename => (this.filename = filename)}
-							type="text"
-							name="filenameInput"
-							value={filenameInput}
-							onClick={e => {
-								this.setState({ filenameInput: "", copySuccess: "Copy" })
-							}}
-							onChange={this.handleChange}
-							className="filename-input"
-						/>
+						<div className="filename-input">
+							<input
+								type="text"
+								name="filenameInput"
+								value={filenameInput}
+								onClick={e => {
+									this.setState({ copySuccess: 'Copy' });
+								}}
+								onChange={this.handleChange}
+							/>
+
+							<button
+								type="submit"
+								onClick={e => {
+									e.preventDefault();
+									this.setState({ filenameInput: '', copySuccess: 'Copy' });
+								}}
+							>
+								<i className="fas fa-backspace" />
+							</button>
+						</div>
 
 						<div
 							className="copy-btn"
 							onClick={e => {
-								if (formattedName !== "") {
-									this.copyToClipboard(e)
+								if (formattedName !== '') {
+									this.copyToClipboard(e);
 								}
 							}}
 						>
-							<div>{formattedName}</div>
+							<input value={formattedName} ref={filename => (this.filename = filename)} />
 							<button type="submit">{copySuccess}</button>
 						</div>
 					</div>
@@ -105,11 +115,17 @@ class FilenameConvertor extends Component {
 								name="spaces"
 								id="dash"
 								value="dash"
-								checked={spaces === "dash"}
+								checked={spaces === 'dash'}
 								onChange={this.handleChange}
 							/>
 							<label htmlFor="dash">Dashes</label>
-							<input type="radio" name="spaces" id="underscore" value="underscore" onChange={this.handleChange} />
+							<input
+								type="radio"
+								name="spaces"
+								id="underscore"
+								value="underscore"
+								onChange={this.handleChange}
+							/>
 							<label htmlFor="underscore">Underscores</label>
 							<input type="radio" name="spaces" id="remove" value="remove" onChange={this.handleChange} />
 							<label htmlFor="remove">Remove them</label>
@@ -126,8 +142,8 @@ class FilenameConvertor extends Component {
 					</div>
 				</form>
 			</div>
-		)
+		);
 	}
 }
 
-export default FilenameConvertor
+export default FilenameConvertor;
