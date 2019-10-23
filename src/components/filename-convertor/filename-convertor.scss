@@ -2,33 +2,98 @@
 
 .convertor {
 	height: 80vh;
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-direction: column;
-	font-size: 30px;
+
+	h2 {
+		margin-bottom: 2em;
+	}
 
 	form {
-		text-align: center;
 		width: 100%;
+	}
 
-		input {
-			width: 80%;
-			text-align: center;
-			margin-bottom: 20px;
-			height: 100px;
-		}
-		.copy-btn {
-			display: inline-block;
+	.filename-input-container {
+		text-align: center;
+		border-bottom: 1px solid lightgrey;
+		padding-bottom: 3rem;
+		margin-bottom: 2rem;
+
+		.filename-input {
+			font-size: 24px;
 			width: 100%;
-			height: 200px;
+			text-align: center;
+			margin-bottom: 3rem;
+			height: 80px;
+		}
+
+		.copy-btn {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			cursor: pointer;
+			background-color: AntiqueWhite;
+			text-align: left;
+			padding-left: 40px;
+			font-size: 20px;
+			font-weight: 600;
+			height: 70px;
+
+			div {
+				max-width: 80%;
+				line-height: 1.5em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
 
 			button {
-				margin-bottom: 10px;
-
+				border: none;
+				background-color: purple;
+				color: white;
+				padding: 10px 20px;
+				width: 160px;
+				height: 100%;
+				text-align: center;
 				+ div {
 					font-size: 16px;
 				}
+			}
+		}
+	}
+
+	.settings {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.spaces {
+		flex: 2;
+		font-size: 16px;
+		line-height: 2em;
+		text-align: left;
+		width: 80%;
+		display: inline-block;
+
+		label {
+			padding: 0 20px 0 10px;
+			cursor: pointer;
+		}
+	}
+
+	.fixes {
+		flex: 1;
+
+		div {
+			margin-bottom: 1rem;
+
+			label {
+				width: 100px;
+				display: inline-block;
 			}
 		}
 	}

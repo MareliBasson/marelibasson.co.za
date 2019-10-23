@@ -11,15 +11,18 @@ class Footer extends Component {
 					</div>
 					<div className="disclaimer">
 						<h5>Disclaimer</h5> <br />
-						This template design is based on one I bought from Creative Market. I have however completely rebuilt it using
-						ReactJS and is hosting it using{" "}
-						<a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">
-							Netlify
-						</a>
-						. You can view the repo for this project here:
-						<a href="https://github.com/MareliBasson/marelibasson.com" target="_blank" rel="noopener noreferrer">
-							marelibasson.com Repo
-						</a>
+						<p>
+							This template design is based on one I bought from Creative Market. I have however completely rebuilt it using
+							ReactJS and is hosting it using{" "}
+							<a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">
+								Netlify
+							</a>
+							. <br />
+							You can view the repo for this project here:{" "}
+							<a href="https://github.com/MareliBasson/marelibasson.com" target="_blank" rel="noopener noreferrer">
+								marelibasson.com
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>

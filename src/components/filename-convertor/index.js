@@ -1,24 +1,60 @@
 import React, { Component } from "react"
-
 import "./filename-convertor.css"
+
+var _ = require("lodash")
 
 class FilenameConvertor extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			input: "",
-			copySuccess: ""
+			filenameInput: "",
+			copySuccess: "Copy",
+			spaces: "dash",
+			prefix: "",
+			suffix: "",
+			formattedName: ""
 		}
+
+		this.formatName = this.formatName.bind(this)
+		this.handleChange = this.handleChange.bind(this)
 	}
 
 	handleChange = e => {
+		const name = e.target.name,
+			val = e.target.value.trim()
+
 		this.setState({
-			input: e.target.value.replace(/\s+/g, "-").toLowerCase()
+			[name]: val
 		})
+	}
+
+	formatName = e => {
+		const { filenameInput, spaces, prefix, suffix } = this.state
+
+		const spaceSymbol = spaces === "underscore" ? "_" : spaces === "dash" ? "-" : ""
+
+		const fullname = `${prefix} ${filenameInput} ${suffix}`
+
+		const formatFullname = fullname
+			.trim()
+			.toLowerCase()
+			.replace(/[-_]/g, " ")
+			.replace(/[.,`"'“”/#!$%^&*;:{}=~()]/g, "")
+
+		this.setState({
+			formattedName: formatFullname.replace(/\s+/g, spaceSymbol)
+		})
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		if (!_.isEqual(prevState, this.state)) {
+			this.formatName()
+		}
 	}
 
 	copyToClipboard = e => {
 		e.preventDefault()
+
 		this.filename.select()
 		document.execCommand("copy")
 		e.target.focus()
@@ -26,23 +62,67 @@ class FilenameConvertor extends Component {
 	}
 
 	render() {
+		const { filenameInput, formattedName, copySuccess, spaces, prefix, suffix } = this.state
+
 		return (
 			<div className="container convertor">
+				<h2>
+					<strong>Filename convertor</strong>
+				</h2>
 				<form>
-					<input
-						ref={filename => (this.filename = filename)}
-						name="name"
-						value={this.state.input}
-						onClick={e => {
-							this.setState({ input: "", copySuccess: "" })
-						}}
-						onChange={e => this.handleChange(e)}
-					/>
-					<div className="copy-btn">
-						<button onClick={this.copyToClipboard} type="submit">
-							Copy
-						</button>
-						<div>{this.state.copySuccess}</div>
+					<div className="filename-input-container">
+						<input
+							ref={filename => (this.filename = filename)}
+							type="text"
+							name="filenameInput"
+							value={filenameInput}
+							onClick={e => {
+								this.setState({ filenameInput: "", copySuccess: "Copy" })
+							}}
+							onChange={this.handleChange}
+							className="filename-input"
+						/>
+
+						<div
+							className="copy-btn"
+							onClick={e => {
+								if (formattedName !== "") {
+									this.copyToClipboard(e)
+								}
+							}}
+						>
+							<div>{formattedName}</div>
+							<button type="submit">{copySuccess}</button>
+						</div>
+					</div>
+
+					<div className="settings">
+						<div className="sections spaces">
+							<strong>Replace spaces with:</strong>
+							<br />
+							<input
+								type="radio"
+								name="spaces"
+								id="dash"
+								value="dash"
+								checked={spaces === "dash"}
+								onChange={this.handleChange}
+							/>
+							<label htmlFor="dash">Dashes</label>
+							<input type="radio" name="spaces" id="underscore" value="underscore" onChange={this.handleChange} />
+							<label htmlFor="underscore">Underscores</label>
+							<input type="radio" name="spaces" id="remove" value="remove" onChange={this.handleChange} />
+							<label htmlFor="remove">Remove them</label>
+						</div>
+
+						<div className="fixes">
+							<label htmlFor="prefix">Prefix: </label>
+							<input type="text" name="prefix" value={prefix} onChange={this.handleChange} />
+						</div>
+						<div className="fixes">
+							<label htmlFor="suffix">Suffix: </label>
+							<input type="text" name="suffix" value={suffix} onChange={this.handleChange} />
+						</div>
 					</div>
 				</form>
 			</div>

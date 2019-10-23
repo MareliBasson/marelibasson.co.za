@@ -10,8 +10,7 @@ class DefaultMenuList extends Component {
 
 	render() {
 		const { handleToggle, scrollToTop, offset, location } = this.props
-		console.log(location)
-		console.log(location !== "/convertor")
+
 		return (
 			<Fragment>
 				{location === "/" ? (
