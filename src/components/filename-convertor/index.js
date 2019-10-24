@@ -34,7 +34,7 @@ class FilenameConvertor extends Component {
 
 		const spaceSymbol = spaces === "underscore" ? "_" : spaces === "dash" ? "-" : ""
 
-		const fullname = `${prefix ? prefix + " " : ""}${filenameInput}${suffix ? " " + suffix : ""}${extension ? "." + extension : ""}`
+		const fullname = `${prefix} ${filenameInput}${suffix && ` ${suffix}`}${extension ? "." + extension : ""}`
 
 		const formatFullname = fullname
 			.trim()
@@ -72,11 +72,24 @@ class FilenameConvertor extends Component {
 				</h2>
 				<form>
 					<div className="filename-input-container">
+						<div
+							className="copy-btn"
+							onClick={e => {
+								if (formattedName !== "") {
+									this.copyToClipboard(e)
+								}
+							}}
+						>
+							<input value={formattedName} ref={filename => (this.filename = filename)} />
+							<button type="submit">{copySuccess}</button>
+						</div>
+
 						<div className="filename-input">
 							<input
 								type="text"
 								name="filenameInput"
 								value={filenameInput}
+								placeholder="enter your filename here"
 								onClick={e => {
 									this.setState({ copySuccess: "Copy" })
 								}}
@@ -93,21 +106,10 @@ class FilenameConvertor extends Component {
 								<i className="fas fa-backspace" />
 							</button>
 						</div>
-
-						<div
-							className="copy-btn"
-							onClick={e => {
-								if (formattedName !== "") {
-									this.copyToClipboard(e)
-								}
-							}}
-						>
-							<input value={formattedName} ref={filename => (this.filename = filename)} />
-							<button type="submit">{copySuccess}</button>
-						</div>
 					</div>
 
 					<div className="settings">
+						<h3>Settings</h3>
 						<div className="sections spaces">
 							<h6>Replace spaces with:</h6>
 							<div>

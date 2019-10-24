@@ -26,9 +26,7 @@
 
 	.filename-input-container {
 		text-align: center;
-		border-bottom: 1px solid lightgrey;
-		padding-bottom: 3rem;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 
 		.filename-input {
 			position: relative;
@@ -72,6 +70,7 @@
 			font-weight: 600;
 			height: 70px;
 			cursor: pointer;
+			margin-bottom: 4rem;
 
 			input {
 				border: none;
@@ -106,75 +105,92 @@
 		}
 	}
 
-	.spaces {
-		font-size: 16px;
-		line-height: 2em;
-		text-align: left;
-		width: 80%;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		margin-bottom: 20px;
+	.settings {
+		background-color: white;
+		padding-bottom: 20px;
 
-		h6 {
-			font-size: 14px;
+		h3 {
+			margin-bottom: 1rem;
+			background-color: AntiqueWhite;
+			padding: 20px;
 			font-weight: 600;
 		}
-
-		input {
-			margin-left: 50px;
-		}
-
-		label {
-			padding: 0 20px 0 10px;
-			cursor: pointer;
-		}
-	}
-
-	.fixes {
-		margin-bottom: 1rem;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-end;
-		position: relative;
-
-		label {
-			width: 100px;
-			display: inline-block;
-			margin-bottom: 5px;
-			font-weight: 600;
-			font-size: 14px;
-		}
-		input {
-			width: 100%;
-			height: 36px;
-			padding: 0 40px 0 20px;
-		}
-
-		> button {
+		.spaces {
+			font-size: 16px;
+			line-height: 2em;
 			text-align: left;
+			width: 80%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0px 20px;
+			margin-bottom: 20px;
 
-			svg {
-				display: inline-block;
-				margin-right: 10px;
+			h6 {
+				font-size: 14px;
+				font-weight: 600;
+			}
+
+			input {
+				margin-left: 50px;
+			}
+
+			label {
+				padding: 0 20px 0 10px;
+				cursor: pointer;
 			}
 		}
 
-		> * {
+		.fixes {
+			margin-bottom: 1rem;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
 			position: relative;
-			margin-right: 50px;
-			flex: 1;
+			padding: 0px 20px;
 
-			button {
-				position: absolute;
-				right: 5px;
-				bottom: 7px;
-				cursor: pointer;
-				transition: all 0.3s ease;
+			label {
+				width: 100px;
+				display: inline-block;
+				margin-bottom: 5px;
+				font-weight: 600;
+				font-size: 14px;
+			}
+			input {
+				width: 100%;
+				height: 36px;
+				padding: 0 40px 0 20px;
+			}
 
-				&:hover {
-					color: indianred;
-					transition: color 0.2s ease;
+			> button {
+				background-color: purple;
+				height: 36px;
+				color: white;
+				margin-right: 0;
+				max-width: 160px;
+
+				svg {
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+
+			> * {
+				position: relative;
+				margin-right: 50px;
+				flex: 1;
+
+				button {
+					position: absolute;
+					right: 5px;
+					bottom: 7px;
+					cursor: pointer;
+					transition: all 0.3s ease;
+
+					&:hover {
+						color: indianred;
+						transition: color 0.2s ease;
+					}
 				}
 			}
 		}
