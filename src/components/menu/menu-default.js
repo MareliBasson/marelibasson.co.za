@@ -49,7 +49,7 @@ class DefaultMenuList extends Component {
 						</Link>
 					</Fragment>
 				) : (
-					<NavLink activeClassName="active" to="/">
+					<NavLink exact activeClassName="active" to="/">
 						<i className="fa fa-home" />
 						Home
 					</NavLink>
@@ -60,9 +60,9 @@ class DefaultMenuList extends Component {
 					Creative Portfolio
 				</a>
 
-				{location !== "/tools" && (
-					<NavLink activeClassName="active" to="/tools">
-						<i class="fas fa-tools" /> Tools
+				{location !== "/filename-convertor" && (
+					<NavLink activeClassName="active" to="/filename-convertor">
+						<i class="fas fa-pencil-alt" /> Filename Convertor
 					</NavLink>
 				)}
 

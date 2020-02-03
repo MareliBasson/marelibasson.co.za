@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import PageTemplate from "components/page-template"
 import Section from "components/section"
 import FilenameConvertor from "components/filename-convertor"
-import "./tools.css"
+import "./filename-convertor.css"
 
-class ToolsPage extends Component {
+class FilenameConvertorPage extends Component {
 	render() {
 		return (
 			<PageTemplate pageHead="Convertor">
@@ -16,4 +16,4 @@ class ToolsPage extends Component {
 	}
 }
 
-export default ToolsPage
+export default FilenameConvertorPage
